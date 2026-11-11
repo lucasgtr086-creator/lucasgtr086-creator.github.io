@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucas 的 GitHub Pages 個人網頁：HTML、CSS 與 jQuery 學習作品。">
+  <title>Lucas | My Personal Page</title>
+  <style>
+    :root { --ink:#232442; --muted:#65708d; --indigo:#6356d9; --violet:#9c84e8; --line:#e7e6f3; --paper:#fff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family:system-ui,-apple-system,"Microsoft JhengHei","Noto Sans TC",sans-serif; background:#f6f7fc; color:var(--ink); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .page { max-width:980px; margin:0 auto; padding:0 24px; }
+    header { background:linear-gradient(115deg,#5d54c8,#8275e7 57%,#9a83e7); color:white; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:24px 0; gap:12px; }
+    .logo { font-size:1.1rem; font-weight:800; letter-spacing:.08em; }
+    nav .navlinks { display:flex; gap:24px; font-size:.9rem; }
+    nav a:hover { text-decoration:underline; }
+    .hero { padding:72px 0 94px; }
+    .eyebrow { letter-spacing:.17em; font-size:.8rem; text-transform:uppercase; opacity:.85; font-weight:700; }
+    h1 { font-size:clamp(2.25rem,5.8vw,4.2rem); margin:14px 0 12px; letter-spacing:-.035em; line-height:1.15; }
+    .hero p { font-size:1.08rem; max-width:550px; opacity:.94; }
+    .hero .hero-link { display:inline-block; margin-top:18px; background:white; color:#5349b5; padding:11px 21px; border-radius:11px; font-weight:800; }
+    main { margin-top:-42px; padding-bottom:54px; }
+    .panel { background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:30px 32px; box-shadow:0 13px 36px rgba(56,49,104,.055); margin-bottom:24px; }
+    h2 { font-size:1.28rem; margin:0 0 10px; }
+    .description { color:var(--muted); margin:0 0 18px; }
+    .tags { display:flex; gap:10px; flex-wrap:wrap; }
+    .tag { background:#f0effe; border:1px solid #e6e2ff; border-radius:999px; color:#5e51c9; padding:6px 14px; font-size:.89rem; font-weight:700; }
+    .demo { background:linear-gradient(130deg,#faf9ff,#f3f2ff); border:1px solid #ece9ff; border-radius:14px; padding:20px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+    button { border:0; cursor:pointer; padding:11px 17px; border-radius:10px; color:white; background:var(--indigo); font-size:.95rem; font-weight:700; font-family:inherit; }
+    button.secondary { background:#ebe8ff; color:#5547b7; }
+    button:hover { filter:brightness(.94); }
+    button:focus-visible,a:focus-visible { outline:3px solid #f5b84e; outline-offset:3px; }
+    #intro { background:white; border-left:4px solid var(--violet); padding:14px 17px; border-radius:0 10px 10px 0; }
+    #message { min-height:28px; font-weight:700; color:#594cc4; margin:15px 0 0; }
+    footer { text-align:center; padding:20px; color:var(--muted); font-size:.87rem; }
+    @media (max-width:640px) { nav {align-items:flex-start;flex-direction:column;} nav .navlinks {gap:16px;} .hero {padding:48px 0 82px;} .panel {padding:24px 19px;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="page">
+      <nav aria-label="主選單">
+        <a class="logo" href="#top">LUCAS / WEB LAB</a>
+        <div class="navlinks">
+          <a href="#about">關於我</a>
+          <a href="#skills">學習內容</a>
+          <a href="#jquery-demo">jQuery 功能</a>
+        </div>
+      </nav>
+      <section class="hero" id="top">
+        <div class="eyebrow">My First GitHub Pages Website</div>
+        <h1>Hi, I'm Lucas 👋</h1>
+        <p>歡迎來到我的個人網頁！這是我在 Web 基本原理與技術課程中，使用 HTML5、CSS 與 jQuery 製作的練習作品。</p>
+        <a class="hero-link" href="#jquery-demo">試試 jQuery 互動功能</a>
+      </section>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel" id="about">
+      <h2>關於我 · About Me</h2>
+      <p class="description">我正在學習如何製作網頁，希望從簡單的排版與按鈕互動開始，慢慢了解網站是怎麼運作的。</p>
+      <p>這是我的第一個 GitHub Pages 個人網站。我使用 HTML 建立內容、CSS 設計外觀，並用 jQuery 讓網頁可以互動。</p>
+    </section>
+
+    <section class="panel" id="skills">
+      <h2>我的學習內容 · What I'm Learning</h2>
+      <p class="description">這次 Lab 2 練習的技術：</p>
+      <div class="tags">
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JSON</span>
+        <span class="tag">Ajax</span>
+        <span class="tag">jQuery</span>
+      </div>
+    </section>
+
+    <section class="panel" id="jquery-demo">
+      <h2>jQuery 互動展示 · Interactive Demo</h2>
+      <p class="description">按下按鈕試試看：不需要重新整理網頁，就能顯示／隱藏內容或改變文字。</p>
+      <div class="demo">
+        <div class="actions">
+          <button type="button" id="toggleButton" aria-controls="intro" aria-expanded="true">隱藏自我介紹</button>
+          <button type="button" class="secondary" id="helloButton">點我打招呼</button>
+        </div>
+        <div id="intro">你好！我是 Lucas。這段內容使用 jQuery 的 <strong>slideToggle()</strong> 控制顯示與隱藏。</div>
+        <p id="message" aria-live="polite">點擊右邊的按鈕，會出現打招呼的訊息。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made by Lucas · HTML5 + CSS + jQuery · Web Lab 2</footer>
+
+  <!-- 載入 jQuery（需要網路連線） -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    // jQuery 功能 1：按鈕可以展開或收起自我介紹
+    $(document).ready(function () {
+      $('#toggleButton').on('click', function () {
+        const wasVisible = $('#intro').is(':visible');
+        $('#intro').slideToggle(250);
+        $(this).text(wasVisible ? '顯示自我介紹' : '隱藏自我介紹');
+        $(this).attr('aria-expanded', String(!wasVisible));
+      });
+
+      // jQuery 功能 2：點擊按鈕後，更新畫面上的訊息
+      $('#helloButton').on('click', function () {
+        $('#message').text('哈囉！歡迎來到我的 GitHub 個人網站 🎉');
+      });
+    });
+  </script>
+</body>
+</html>
